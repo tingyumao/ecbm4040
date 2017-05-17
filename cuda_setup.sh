@@ -11,9 +11,9 @@ echo "install paths and download some files yourse"
 DIR=$(pwd)
 
 # /bin/bash
-set -e
-set -u
-set -x
+#set -e
+#set -u
+#set -x
 
 # NVIDIA CUDA
 
@@ -26,12 +26,12 @@ sudo apt-get install g++
 ## step 2.3 install make
 sudo apt-get install make
 
-## step 2.4  install Correct Kernel Headers and Development Packages
+## step 2.4 install Correct Kernel Headers and Development Packages
 sudo apt-get install linux-headers-$(uname -r)
 
-## start cuda installation
-if [ ! -d ~/Downloads/]; then
-  mkdir ~/Downloads/
+## step 3 start cuda installation
+if [ ! -d ~/Downloads ]; then
+  mkdir ~/Downloads
   echo "create ~/Downloads folder under home directory"
 fi
 
@@ -40,8 +40,13 @@ cd ~/Downloads/
 if [ ! -f ~/Downloads/cuda_8.0.61_375.26_linux-run ]; then
   wget https://developer.nvidia.com/compute/cuda/8.0/Prod2/local_installers/cuda_8.0.61_375.26_linux-run 
   echo "cuda toolkit file downloads DONE"
+else
+  echo "cuda toolkit has already been downloaded"
 fi
 
-#sudo sh cuda_8.0.61_375.26_linux-run
+sudo sh cuda_8.0.61_375.26_linux-run
+
+export PATH=$PATH:/usr/local/cuda/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
 
 cd $DIR
