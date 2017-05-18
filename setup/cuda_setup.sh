@@ -54,4 +54,6 @@ echo "##CUDA toolkit" >> ~/.bashrc
 echo "export PATH=$PATH:/usr/local/cuda-8.0/bin" >> ~/.bashrc
 echo "export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64" >> ~/.bashrc
 
+source ~/.bashrc
+
 cd $DIR

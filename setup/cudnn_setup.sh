@@ -4,8 +4,8 @@ echo "########################"
 echo "# CUDNN Setup #"
 echo "########################"
 echo ""
-echo "Manual steps are involved! you may need to update the"
-echo "install paths and download some files yourse"
+echo "Remember to put cudnn package(cudnn-8.0-linux-x64-v5.1.solitairetheme8)"
+echo "and cudnn_setup.sh in the same folder"
 
 # Save script's current directory
 DIR=$(pwd)
@@ -18,12 +18,15 @@ DIR=$(pwd)
 # NVIDIA CUDNN v5.1
 
 ## step 1 unpack cudnn package
-sudo apt-get install gcc
+tar -xvf cudnn-8.0-linux-x64-v5.1.solitairetheme8
 
-## step 2 move 
-tar -xvf 
+## step 2 move cudnn.h to /usr/local/cuda-8.0/include/
+sudo cp ./cuda/include/cudnn.h /usr/local/cuda-8.0/include/ 
 
-## step 3 install make
+## step 3 move lib files to /usr/local/cuda-8.0/lib64/
+sudo cp ./cuda/lib64/* /usr/local/cuda-8.0/lib64/ 
 
+## step 4 remove intermediate files
+rm -rf ./cuda
 
 cd $DIR
