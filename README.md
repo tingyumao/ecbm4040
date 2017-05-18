@@ -6,7 +6,9 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 ### Environment setup 
 
-1. Install CUDA toolkit
+1. Create your own instance on google console
+
+2. Install CUDA toolkit
 
 ```markdown
 Syntax highlighted code block
@@ -20,6 +22,10 @@ Syntax highlighted code block
 
 1. Numbered
 2. List
+
+```code
+cd setup
+```
 
 **Bold** and _Italic_ and `Code` text
 
