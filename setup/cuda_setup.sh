@@ -46,7 +46,7 @@ else
 fi
 
 ## step 3.2 install cuda
-#sudo sh cuda_8.0.61_375.26_linux-run
+sudo sh cuda_8.0.61_375.26_linux-run
 
 ## step 3.3 edit environmental var in ~/.bashrc file
 cd ~
