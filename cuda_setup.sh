@@ -30,6 +30,7 @@ sudo apt-get install make
 sudo apt-get install linux-headers-$(uname -r)
 
 ## step 3 start cuda installation
+## step 3.1 download file
 if [ ! -d ~/Downloads ]; then
   mkdir ~/Downloads
   echo "create ~/Downloads folder under home directory"
@@ -44,9 +45,13 @@ else
   echo "cuda toolkit has already been downloaded"
 fi
 
-sudo sh cuda_8.0.61_375.26_linux-run
+## step 3.2 install cuda
+#sudo sh cuda_8.0.61_375.26_linux-run
 
-export PATH=$PATH:/usr/local/cuda/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+## step 3.3 edit environmental var in ~/.bashrc file
+cd ~
+echo "##CUDA toolkit" >> ~/.bashrc
+echo "export PATH=$PATH:/usr/local/cuda-8.0/bin" >> ~/.bashrc
+echo "export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64" >> ~/.bashrc
 
 cd $DIR
