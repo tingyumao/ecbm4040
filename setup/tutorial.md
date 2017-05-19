@@ -5,7 +5,7 @@
 1. Go to 
 
 ## Add CUDA into your PATH
-CUDA toolkit(8.0) as well as cuDNN(v5.1) has already installed in your instance. To use it, you need to add the location of cuda toolkit into your environment variable.
+CUDA toolkit(8.0) as well as cuDNN(v5.1) has already been installed in your instance. To use it, you need to add the location of cuda toolkit into your environment variable.
 
 Open your ~/.bashrc file
 ```
