@@ -4,6 +4,63 @@
 
 1. Go to 
 
+## Add CUDA into your PATH
+CUDA toolkit(8.0) as well as cuDNN(v5.1) has already installed in your instance. To use it, you need to add the location of cuda toolkit into your environment variable.
+
+Open your ~/.bashrc file
+```
+$ vi ~/.bashrc
+```
+
+Then add following content into the end of your ~/.bashrc file. Here is a link on [vi/vim editorvi editor](https://www.cs.colostate.edu/helpdocs/vi.html) 
+```
+##CUDA toolkit
+export PATH="/usr/local/cuda-8.0/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH"
+```
+
+Then reinitialize your environment variables.
+```
+$ source ~/.bashrc
+```
+
+Then you can run following code to check if CUDA is avaiable.
+```
+$ nvcc -V
+```
+
+And you will see something like below and the output shows the version of CUDA.
+```
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2016 NVIDIA Corporation
+Built on Tue_Jan_10_13:22:03_CST_2017
+Cuda compilation tools, release 8.0, V8.0.61
+```
+
+Moreover, if you want to know info on the gpu then you can run,
+```
+$ nvidia-smi
+```
+
+And you will see,
+```
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 375.26                 Driver Version: 375.26                    |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla K80           Off  | 0000:00:04.0     Off |                    0 |
+| N/A   49C    P0    71W / 149W |      0MiB / 11439MiB |    100%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID  Type  Process name                               Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+```
 
 ## Create gpu instance
 1. Go to "Compute Engine" and choose "Images".
