@@ -139,7 +139,8 @@
     gcloud compute ssh --ssh-flag="-L 9999:localhost:9999"  --zone "us-east1-d" "your-instance-name"
     ```
 
-6. Now last step!!! Open your browser and type in http://localhost:9999 or https://localhost:9999 and you will see that it has connected to your gpu instance. Then type in your jupyter password and you can enter into your instance directory. From now you have finish all the basic setup for future experiments.:+1:
+6. Now last step!!! Open your browser and type in http://localhost:9999 or https://localhost:9999 and you will see that it has connected to your gpu instance. Then type in your jupyter password and you can enter into your instance directory. From now on, you have finished all the basic setup for future experiments.
+:+1:
 
 ## Other packages installation
 
