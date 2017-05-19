@@ -127,13 +127,20 @@ Verify password: ****
 
 5. Connect your local machine to the google instance.
 
-First, download and install [google cloud SDK](https://cloud.google.com/sdk/). Then open your Google Cloud SDK console and type in.
+First, download and install [google cloud SDK](https://cloud.google.com/sdk/). Then open your Google Cloud SDK console and initialize your gcloud account. Here the information like zone or project id should conform  with your previous setting.
 
+```
+gcloud init
+```
+
+Then type in following code to set up connection with cloud gpu machine. Note that "-L 9999:localhost:9999", here the first "9999" is your local port and you can set some other port number if you want. The second "9999" is the remote port number and it should be the same as the port that jupyter notebook are running.   
 ```
 gcloud compute ssh --ssh-flag="-L 9999:localhost:9999"  --zone "us-east1-d" "your-instance-name"
 ```
 
-6. Now last step!!! Open your browser and type in https://localhost:9999 as well as your login password and you will see that it has connected to your gpu instance. From now you have finish all the basic setup for future experiments.:+1:
+6. Now last step!!! Open your browser and type in http://localhost:9999 or https://localhost:9999 and you will see that it has connected to your gpu instance. Then type in your jupyter password and you can enter into your instance directory. From now you have finish all the basic setup for future experiments.
+
+:+1:
 
 ## Other packages installation
 
