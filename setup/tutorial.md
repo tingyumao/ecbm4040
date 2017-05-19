@@ -1,17 +1,11 @@
 # Deep learning environment setup
 
-Three steps before you use gpu
-
- *
-
-:+1:
-
-### Sign up your google cloud account:
+## Sign up your google cloud account:
 
 1. Go to 
 
 
-### Create gpu instance
+## Create gpu instance
 1. Go to "Compute Engine" and choose "Images".
 
 
@@ -23,7 +17,7 @@ Three steps before you use gpu
 
 ** Here it may request you to fill out a form to increase your GPU quota. 
 
-### Install miniconda and packages
+## Install miniconda and packages
 1. Open your instance by SSH.
 2. Run the code below to download and install Miniconda.Type "y" or "yes" during installation. For more information on miniconda, please refer to [Miniconda](https://conda.io/docs/intro.html).
 
@@ -94,7 +88,7 @@ a: (Const): /job:localhost/replica:0/task:0/gpu:0
  [ 49.  64.]]
 ```
 
-### Use Jupyter
+## Use Jupyter
 1. [Jupyter](http://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html) is  a useful server-client application for editing code as well as dispalying results like figure or audio files.
 
 2. Install Jupyter
@@ -139,9 +133,9 @@ First, download and install [google cloud SDK](https://cloud.google.com/sdk/). T
 gcloud compute ssh --ssh-flag="-L 9999:localhost:9999"  --zone "us-east1-d" "your-instance-name"
 ```
 
-6. Now last step!!! Open your browser and type in https://localhost:9999 as well as your login password and you will see that it has connected to your gpu instance. From now you have finish all the basic setup for future experiments.
+6. Now last step!!! Open your browser and type in https://localhost:9999 as well as your login password and you will see that it has connected to your gpu instance. From now you have finish all the basic setup for future experiments.:+1:
 
-### Other packages installation
+## Other packages installation
 
 You may also need some other package other than tensorflow in future and installing methods is as below. You can use either "conda" or "pip" to install and generally, "pip" owns more package resources.
 
