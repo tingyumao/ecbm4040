@@ -72,6 +72,8 @@ And you will see,
 
 4. Click "Create" to create your own instance.
 
+5. Remember to stop your instance immediately when you finish your job. Otherwise, it will count in your billing. And the price for one gpu is about $0.7 per hour.
+
 ** Here it may request you to fill out a form to increase your GPU quota. 
 
 ## Install miniconda and packages
@@ -185,7 +187,7 @@ And you will see,
 
 5. Connect your local machine to the google instance.
 
-    First, download and install [google cloud SDK](https://cloud.google.com/sdk/). Then open your Google Cloud SDK console and initialize your gcloud account. Here the information like zone or project id should conform  with your previous setting.
+    First, download and install [google cloud SDK](https://cloud.google.com/sdk/). Then open your Google Cloud SDK console and initialize your gcloud account. Here the information like zone or project id should conform  with your previous setting. This step is only for first-time configuration.
 
     ```
     gcloud init
